@@ -1,0 +1,22 @@
+{
+  "name": "kvndlgs.github.io",
+  "version": "1.0.0",
+  "description": "\"# kvndlgs \"",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "sass -w scss/main.scss:assets/css/main.css --no-cache",
+    "start": "http-server -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvndlgs/kvndlgs.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kvndlgs/kvndlgs.github.io/issues"
+  },
+  "homepage": "https://github.com/kvndlgs/kvndlgs.github.io#readme"
+}
