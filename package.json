@@ -2,10 +2,10 @@
   "name": "kvndlgs.github.io",
   "version": "1.0.0",
   "description": "\"# kvndlgs \"",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "watch-sass": "sass -w scss/main.scss:assets/css/main.css --no-cache",
-    "start": "http-server -c-1",
+    "tw-watch": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/kvndlgs/kvndlgs.github.io/issues"
   },
-  "homepage": "https://github.com/kvndlgs/kvndlgs.github.io#readme"
+  "homepage": "https://github.com/kvndlgs/kvndlgs.github.io#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "@tailwindcss/vite": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+  }
 }
