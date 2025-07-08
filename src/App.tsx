@@ -1,16 +1,16 @@
-import './App.css'
-import { Navbar } from '@/components/navbar';
+import Navigation from '@/components/Navigation';
+import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
+import "./App.css"
 
 function App() {
-
   return (
-    <>
-      
-        <Navbar />
-      
-    
-    </>
-  )
+    <div className="min-h-screen bg-gray-50" data-theme="kvds">
+      <Navigation />
+      <Hero />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

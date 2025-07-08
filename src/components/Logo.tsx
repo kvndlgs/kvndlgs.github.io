@@ -1,21 +1,14 @@
-const Logo = () => {
-    return (
-        <svg
-      version="1.1"
-      height="512"
-      width="512"
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      viewBox="0 0 512 512"
-      fill='#bf88e2'
-    >
-      <path
-        d="M262.7,337l27.3-60.2l21.6-45.6l-24,39L258.7,176h59c44.5,0,80.4,36,80.4,80.5
-S361.9,337,317.5,337H262.7z M251,337l-42.6-78.2l-22.5,36.7l20.3-44.8l33.2-75.5L114,175.4V337H251z"
-      />
-      </svg>
-    )
+interface LogoProps {
+  size?: string;
+  color?: string;
 }
 
-export default Logo
+export default function Logo({ size, color }: LogoProps) {
+  return (
+    <div className={`w-${size ? size : '148'} h-auto flex items-center justify-center`}>
+      <svg width="66" height="38" viewBox="0 0 66 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M34.5449 38L40.887 23.8616L45.905 13.152L40.3295 22.3115L33.6156 0.187887H47.3221C57.66 0.187887 66 8.64277 66 19.0939C66 29.5451 57.5903 38 47.2756 38H34.5449ZM31.8268 38L21.9303 19.6341L16.7033 28.2534L21.4192 17.7318L29.132 0L0 0.0469709V38H31.8268Z" fill={ color ? color : "#3D1556" } />
+      </svg>
+    </div>
+  )
+}
