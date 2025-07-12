@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Logo from './Logo';
-import { Menu, X, ChevronDown, Code } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,9 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
+            <NavLink to="/">
             <Logo color="oklch(25% 0.092 26.042)" />
+            </NavLink>
           </div>
 
           {/* Desktop Navigation */}
@@ -24,29 +27,31 @@ const Navigation: React.FC = () => {
               {/* Projects Dropdown */}
               <div className="dropdown dropdown-hover">
                 <div tabIndex={0} role="button" className="text-primary-content btn btn-ghost flex items-center">
+                  <NavLink to="/projects">
                   Projects
                   <ChevronDown className="ml-1 h-4 w-4 text-primary-content" />
+                  </NavLink>
                 </div>
                 <ul tabIndex={0} className="text-primary-content dropdown-content menu bg-white rounded-box z-[1] w-52 p-2 shadow-lg border">
                   <li>
-                    <a href="#web-apps" className="text-primary-content hover:bg-primary hover:text-white transition-colors">
-                      Web Applications
-                    </a>
+                    <NavLink to="/projects/project" className="text-primary-content hover:bg-primary hover:text-white transition-colors">
+                      Website & Design
+                    </NavLink>
                   </li>
                   <li>
-                    <a href="#mobile-apps" className="text-primary-content hover:bg-primary hover:text-white transition-colors">
-                      Mobile Apps
-                    </a>
+                    <NavLink to="/projects/case-study" className="text-primary-content hover:bg-primary hover:text-white transition-colors">
+                      Case Study
+                    </NavLink>
                   </li>
                 </ul>
               </div>
 
-              <a href="#about" className="btn btn-ghost hover:bg-primary hover:text-white transition-colors">
+              <NavLink to="/about" className="btn btn-ghost hover:bg-primary hover:text-white transition-colors">
                 About
-              </a>
-              <a href="#contact" className="btn btn-ghost hover:bg-primary hover:text-white transition-colors">
+              </NavLink>
+              <NavLink to="#contact" className="btn btn-ghost hover:bg-primary hover:text-white transition-colors">
                 Let's talk
-              </a>
+              </NavLink>
             </div>
           </div>
 
@@ -73,29 +78,29 @@ const Navigation: React.FC = () => {
                 <div className="collapse-content">
                   <ul className="menu text-primary-content">
                     <li>
-                      <a href="#web-apps" onClick={toggleMenu}>Web Applications</a>
+                      <NavLink to="/projects/project" onClick={toggleMenu}>Website & Designs</NavLink>
                     </li>
                     <li>
-                      <a href="#mobile-apps" onClick={toggleMenu}>Mobile Apps</a>
+                      <NavLink to="/projects/case-study" onClick={toggleMenu}>Case Study</NavLink>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <a 
-                href="#about" 
+              <NavLink
+                to="/about" 
                 className="block px-3 py-2 text-base font-medium text-primary-content hover:bg-primary hover:text-white rounded-md transition-colors"
                 onClick={toggleMenu}
               >
                 About
-              </a>
-              <a 
-                href="#contact" 
+              </NavLink>
+              <NavLink
+                to="#contact" 
                 className="block px-3 py-2 text-base font-medium text-primary-content hover:bg-primary hover:text-white rounded-md transition-colors"
                 onClick={toggleMenu}
               >
                 Let's talk
-              </a>
+              </NavLink>
             </div>
           </div>
         )}

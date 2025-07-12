@@ -1,16 +1,29 @@
-import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
-import Footer from '@/components/Footer';
-import "./App.css"
+import { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from '@/components/Layout';
+const Home = lazy(() => import('@/pages/Home'));
+const Project = lazy(() => import('@/pages/Project'));
+const ProjectList = lazy(() => import('@/pages/ProjectList'));
+const About = lazy(() => import('@/pages/About'));
+const NoMatch = lazy(() => import('@/components/NoMatch'));
+import "./App.css";
+
+
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50" data-theme="kvds">
-      <Navigation />
-      <Hero />
-      <Footer />
-    </div>
-  );
+    <Layout>
+      <Suspense fallback={<div className="container">Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ProjectList /> } />
+        <Route path="/projects/:slug" element={<Project />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+      </Suspense>
+    </Layout>
+  )
 }
 
 export default App;
