@@ -1,12 +1,12 @@
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import { Github, Dribbble, Twitter, Mail, Heart } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/johndoe', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/johndoe', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/kvndlgs', label: 'GitHub' },
+    { icon: Dribbble, href: 'https://dribbble.com/kvds', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/johndoe', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:john@example.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:kvndesloges@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       </div>
       <div>
         <p className="flex items-center gap-2">
-          Made with <Heart className="w-4 h-4 text-red-500" /> by John Doe
+          Made with <Heart className="w-4 h-4 text-red-500" /> by Kevin Desloges
         </p>
         <p className="text-sm opacity-70">
           © {new Date().getFullYear()} All rights reserved.

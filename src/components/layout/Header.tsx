@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun, Code } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
+import Logo from '../Logo';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,8 +23,7 @@ const Header: React.FC = () => {
     <header className="navbar bg-base-100 shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
       <div className="navbar-start">
         <Link to="/" className="btn btn-ghost text-xl font-bold">
-          <Code className="w-6 h-6 mr-2 text-primary" />
-          John Doe
+          <Logo size="54" />
         </Link>
       </div>
 

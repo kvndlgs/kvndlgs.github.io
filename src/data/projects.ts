@@ -17,13 +17,13 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: 'AI Cyper: Rap Battle Generator',
     description: 'A full-featured e-commerce platform with user authentication, payment processing, and admin dashboard.',
     longDescription: 'A comprehensive e-commerce solution built with React and Node.js. Features include user authentication, product catalog, shopping cart, payment processing with Stripe, order management, and a complete admin dashboard for inventory management.',
     image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
     technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe', 'JWT', 'Tailwind CSS'],
-    liveUrl: 'https://ecommerce-demo.com',
-    githubUrl: 'https://github.com/johndoe/ecommerce-platform',
+    liveUrl: 'https://rapbattleai.netlify.app',
+    githubUrl: 'https://github.com/kvndlgs/ecommerce-platform',
     featured: true,
     features: [
       'User registration and authentication',
@@ -36,12 +36,12 @@ export const projects: Project[] = [
       'Email notifications for orders'
     ],
     duration: '4 months',
-    teamSize: '3 developers',
-    role: 'Full-Stack Developer & Team Lead'
+    teamSize: '1',
+    role: 'Full-Stack Developer'
   },
   {
     id: 2,
-    title: 'Task Management App',
+    title: 'Parapluie: AI In Service of Senior Financlial Security',
     description: 'A collaborative task management application with real-time updates and team collaboration features.',
     longDescription: 'A modern task management solution designed for teams. Built with React and Socket.io for real-time collaboration, featuring drag-and-drop kanban boards, time tracking, team chat, and comprehensive project analytics.',
     image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600',

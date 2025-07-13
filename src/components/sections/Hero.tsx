@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Download, Github, Linkedin } from 'lucide-react';
+import { ArrowDown, Download, Dribbble, Github, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
               <img
                 src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300"
-                alt="John Doe"
+                alt="Kevin Desloges"
                 className="rounded-full"
               />
             </div>
@@ -37,9 +37,9 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-4"
           >
-            Hi, I'm{' '}
+            Hello, I'm{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              John Doe
+              Kevin
             </span>
           </motion.h1>
 
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl md:text-2xl mb-2 text-base-content/80"
           >
-            Fullstack Developer
+            Fullstack Developer Based In Quebec.
           </motion.p>
 
           <motion.p
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
             </a>
             <div className="flex gap-2">
               <a
-                href="https://github.com/johndoe"
+                href="https://github.com/kvndlgs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline btn-lg btn-circle"
@@ -87,13 +87,13 @@ const Hero: React.FC = () => {
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/in/johndoe"
+                href="https://dribbble.com/kvds"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline btn-lg btn-circle"
-                aria-label="LinkedIn"
+                aria-label="dribbble"
               >
-                <Linkedin className="w-6 h-6" />
+                <Dribbble className="w-6 h-6" />
               </a>
             </div>
           </motion.div>
