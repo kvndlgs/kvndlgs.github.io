@@ -1,18 +1,22 @@
 {
   "name": "kvndlgs.github.io",
+  "homepage": "https://kvndlgs.github.io/kvndlgs.github.io",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
-    "dependencies": {
+  "dependencies": {
     "@hookform/resolvers": "^5.1.1",
     "@tailwindcss/typography": "^0.5.16",
     "daisyui": "^5.0.46",
     "framer-motion": "^12.23.3",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.525.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -20,7 +24,7 @@
     "react-router-dom": "^7.6.3",
     "zod": "^4.0.5"
   },
-   "devDependencies": {
+  "devDependencies": {
     "@eslint/js": "^9.9.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
