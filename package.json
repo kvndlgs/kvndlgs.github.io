@@ -1,5 +1,6 @@
 {
-  "name": "kvndlgs.github.io",
+  "name": "portfolio",
+  "private": true,
   "homepage": "https://github.com/kvndlgs/kvndlgs.github.io",
   "version": "1.0.0",
   "type": "module",
